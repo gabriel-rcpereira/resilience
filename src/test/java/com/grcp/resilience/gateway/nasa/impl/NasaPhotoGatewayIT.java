@@ -71,7 +71,7 @@ public class NasaPhotoGatewayIT {
 
     @Test
     public void shouldExecuteApiAndExpectsFallbackFromCircuitBreaker() {
-        int expectedRequests = 4;
+        int expectedRequests = 7;
 
         mockServiceUnavailableApi();
         RequestPattern requestPattern = RequestPatternBuilder.allRequests()
