@@ -1,0 +1,6 @@
+api:
+  external:
+    nasa:
+      source: ${EXTERNAL_DOMAIN}
+      name: marsRoverApi
+      key: test-key
