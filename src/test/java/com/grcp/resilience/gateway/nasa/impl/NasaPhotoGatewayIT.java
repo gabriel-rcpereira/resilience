@@ -102,7 +102,7 @@ public class NasaPhotoGatewayIT {
 
         int actualRequestsUntilCircuitBreakerCloses = wireMock.countRequestsMatching(requestPattern).getCount();
 
-        Assertions.assertEquals(actualRequestsUntilCircuitBreakerCloses, expectedRequestsUntilCircuitBreakerCloses);
+        Assertions.assertEquals(expectedRequestsUntilCircuitBreakerCloses, actualRequestsUntilCircuitBreakerCloses);
         Assertions.assertTrue(spacePhotoOptionalRetryFallback.isPresent());
         Assertions.assertTrue(spacePhotoOptionalRetryFallback.get().isError());
         Assertions.assertEquals(spacePhotoOptionalRetryFallback.get().getErrorSource(), "retry");

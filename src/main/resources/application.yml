@@ -3,7 +3,7 @@ spring:
   jackson.serialization.indent_output: true
 
 server:
-  port: 9090
+  port: 8080
 
 api:
   external:
@@ -19,6 +19,12 @@ feign:
         loggerLevel: basic
   hystrix:
     enabled: false
+
+resilience4j:
+  circuitbreaker:
+    circuitBreakerAspectOrder: 2
+  retry:
+    retryAspectOrder: 1
 
 resilience4j.circuitbreaker:
   configs:
@@ -67,7 +73,7 @@ resilience4j.retry:
     default:
       maxRetryAttempts: 4
       waitDuration: 1s
-      enableExponentialBackoff: true
+      enableExponentialBackoff: false
       exponentialBackoffMultiplier: 2
       retryExceptions:
         - feign.FeignException

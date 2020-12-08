@@ -1,3 +1,9 @@
+## Retry pattern 
+- https://docs.microsoft.com/en-us/azure/architecture/patterns/retry
+- https://dzone.com/articles/understanding-retry-pattern-with-exponential-back
+
+## Circuit pattern
+- https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 
 ## API
 - https://api.nasa.gov/#browseAPI

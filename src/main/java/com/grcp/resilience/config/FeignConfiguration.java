@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class FeignConfiguration {
 
-    @Bean
-    public Logger logger() {
-        return new FeignLoggerTestConfiguration();
-    }
+//    @Bean
+//    public Logger logger() {
+//        return new FeignLoggerTestConfiguration();
+//    }
 }
