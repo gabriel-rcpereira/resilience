@@ -3,7 +3,7 @@ package com.grcp.resilience.gateway.nasa.impl;
 import com.grcp.resilience.domain.space.Photo;
 import com.grcp.resilience.domain.space.SpacePhoto;
 import com.grcp.resilience.gateway.SpacePhotoGateway;
-import com.grcp.resilience.gateway.nasa.feign.MarsRoverPhoto;
+import com.grcp.resilience.gateway.nasa.feign.MarsRoverPhotoClient;
 import com.grcp.resilience.gateway.nasa.feign.json.MarsRoverPhotoResponse;
 import com.grcp.resilience.gateway.nasa.feign.json.MarsRoverResponse;
 import java.util.List;
@@ -14,15 +14,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class NasaPhotoGateway implements SpacePhotoGateway {
 
-    private final MarsRoverPhoto marsRoverPhoto;
+    private final MarsRoverPhotoClient marsRoverPhotoClient;
 
-    public NasaPhotoGateway(MarsRoverPhoto spacePhoto) {
-        this.marsRoverPhoto = spacePhoto;
+    public NasaPhotoGateway(MarsRoverPhotoClient spacePhoto) {
+        this.marsRoverPhotoClient = spacePhoto;
     }
 
     @Override
     public Optional<SpacePhoto> findPhotos() {
-        MarsRoverResponse marsRoverResponse = marsRoverPhoto.findSpacePhotos();
+        MarsRoverResponse marsRoverResponse = marsRoverPhotoClient.findSpacePhotos();
         return Optional.of(mapToSpacePhotos(marsRoverResponse));
     }
 

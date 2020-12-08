@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(value = "${api.external.nasa.name}", url = "${api.external.nasa.source}")
-public interface MarsRoverPhoto {
+public interface MarsRoverPhotoClient {
 
     @CircuitBreaker(name = "nasapi", fallbackMethod = "findSpacePhotosCircuitBreakerFallback")
     @Retry(name = "nasapi", fallbackMethod = "findSpacePhotosFeignFallback")

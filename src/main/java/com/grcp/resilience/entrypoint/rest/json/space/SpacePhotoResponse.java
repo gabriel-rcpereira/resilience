@@ -1,4 +1,4 @@
-package com.grcp.resilience.entrypoint.rest.json;
+package com.grcp.resilience.entrypoint.rest.json.space;
 
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;

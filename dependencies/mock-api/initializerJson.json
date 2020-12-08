@@ -1,7 +1,17 @@
 [
   {
     "httpRequest": {
-      "path": "/test-retry",
+      "path": "/test-fail",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "body": "hello",
+      "statusCode": 500
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/test-success-after-four-times",
       "method": "GET"
     },
     "times" : {
@@ -15,7 +25,7 @@
   },
   {
     "httpRequest": {
-      "path": "/test-retry",
+      "path": "/test-success-after-four-times",
       "method": "GET"
     },
     "httpResponse": {

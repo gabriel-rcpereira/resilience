@@ -1,8 +1,8 @@
-package com.grcp.resilience.entrypoint.rest.mapper;
+package com.grcp.resilience.entrypoint.rest.mapper.space;
 
 import com.grcp.resilience.domain.space.Photo;
 import com.grcp.resilience.domain.space.SpacePhoto;
-import com.grcp.resilience.entrypoint.rest.json.SpacePhotoResponse;
+import com.grcp.resilience.entrypoint.rest.json.space.SpacePhotoResponse;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;

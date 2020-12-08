@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class Resilience4Configuration {
+public class ResilienceConfiguration {
 
     @Bean
     public RegistryEventConsumer<Retry> registerRetryEventConsumer() {

@@ -1,8 +1,8 @@
 package com.grcp.resilience.entrypoint.rest.controller;
 
-import com.grcp.resilience.entrypoint.rest.json.SpacePhotoResponse;
+import com.grcp.resilience.entrypoint.rest.json.space.SpacePhotoResponse;
 import com.grcp.resilience.usecase.FindSpacePhotos;
-import com.grcp.resilience.entrypoint.rest.mapper.SpacePhotoMapper;
+import com.grcp.resilience.entrypoint.rest.mapper.space.SpacePhotoMapper;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
