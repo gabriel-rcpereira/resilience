@@ -1,16 +1,16 @@
-package com.grcp.resilience.core.usecase;
+package com.grcp.resilience.usecase;
 
-import com.grcp.resilience.core.domain.space.SpacePhoto;
+import com.grcp.resilience.domain.space.SpacePhoto;
 import com.grcp.resilience.gateway.SpacePhotoGateway;
 import java.util.Optional;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SpacePhotosFinder {
+public class FindSpacePhotos {
 
     private final SpacePhotoGateway spacePhotoGateway;
 
-    public SpacePhotosFinder(SpacePhotoGateway spacePhotoGateway) {
+    public FindSpacePhotos(SpacePhotoGateway spacePhotoGateway) {
         this.spacePhotoGateway = spacePhotoGateway;
     }
 

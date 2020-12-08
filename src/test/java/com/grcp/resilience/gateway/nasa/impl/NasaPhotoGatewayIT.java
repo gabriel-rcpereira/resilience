@@ -8,7 +8,7 @@ import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.matching.RequestPattern;
 import com.github.tomakehurst.wiremock.matching.RequestPatternBuilder;
 import com.grcp.resilience.config.WireMockInitializer;
-import com.grcp.resilience.core.domain.space.SpacePhoto;
+import com.grcp.resilience.domain.space.SpacePhoto;
 import com.grcp.resilience.gateway.nasa.feign.json.MarsRoverResponse;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 import java.util.Optional;

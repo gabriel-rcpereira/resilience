@@ -1,13 +1,11 @@
 package com.grcp.resilience.gateway.nasa.impl;
 
-import com.grcp.resilience.core.domain.space.Photo;
-import com.grcp.resilience.core.domain.space.SpacePhoto;
+import com.grcp.resilience.domain.space.Photo;
+import com.grcp.resilience.domain.space.SpacePhoto;
 import com.grcp.resilience.gateway.SpacePhotoGateway;
 import com.grcp.resilience.gateway.nasa.feign.MarsRoverPhoto;
 import com.grcp.resilience.gateway.nasa.feign.json.MarsRoverPhotoResponse;
 import com.grcp.resilience.gateway.nasa.feign.json.MarsRoverResponse;
-import feign.FeignException;
-import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

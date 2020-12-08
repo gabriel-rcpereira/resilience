@@ -1,7 +1,7 @@
 package com.grcp.resilience.entrypoint.rest.mapper;
 
-import com.grcp.resilience.core.domain.space.Photo;
-import com.grcp.resilience.core.domain.space.SpacePhoto;
+import com.grcp.resilience.domain.space.Photo;
+import com.grcp.resilience.domain.space.SpacePhoto;
 import com.grcp.resilience.entrypoint.rest.json.SpacePhotoResponse;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package com.grcp.resilience.core.domain.space;
+package com.grcp.resilience.domain.space;
 
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;

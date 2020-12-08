@@ -11,6 +11,9 @@ api:
       source: https://api.nasa.gov
       name: marsRoverApi
       key: F4tJVKleVGv1YGnox8ea937CgVRfD2wnkg4sGvz3
+    dojo:
+      source: http://localhost:1080
+      name: dojo-test
 
 feign:
   client:

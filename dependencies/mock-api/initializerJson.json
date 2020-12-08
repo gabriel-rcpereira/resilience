@@ -1,0 +1,26 @@
+[
+  {
+    "httpRequest": {
+      "path": "/test-retry",
+      "method": "GET"
+    },
+    "times" : {
+      "remainingTimes" : 2,
+      "unlimited" : false
+    },
+    "httpResponse": {
+      "body": "hello",
+      "statusCode": 500
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/test-retry",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "body": "hello",
+      "statusCode": 200
+    }
+  }
+]
