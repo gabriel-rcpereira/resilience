@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface MarsRoverPhoto {
 
     @CircuitBreaker(name = "nasapi")
-    @Retry(name = "nasapi", fallbackMethod = "findSpacePhotosRetryFallback")
+    @Retry(name = "nasapi", fallbackMethod = "findSpacePhotosFallback")
     @GetMapping("/mars-photos/api/v1/rovers/curiosity/photos?sol=10&api_key=${api.external.nasa.key}")
     MarsRoverResponse findSpacePhotos();
 
-    default MarsRoverResponse findSpacePhotosRetryFallback(FeignException e) {
+    default MarsRoverResponse findSpacePhotosFallback(FeignException e) {
         return MarsRoverResponse.builder().isError(true).fallbackSource("retry").build();
     }
 
-    default MarsRoverResponse findSpacePhotosRetryFallback(CallNotPermittedException e) {
+    default MarsRoverResponse findSpacePhotosFallback(CallNotPermittedException e) {
         return MarsRoverResponse.builder().isError(true).fallbackSource("circuitBreaker").build();
     }
 }

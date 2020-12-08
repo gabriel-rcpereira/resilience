@@ -20,6 +20,15 @@ feign:
   hystrix:
     enabled: false
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+management.health.circuitbreakers.enabled: true
+management.health.ratelimiters.enabled: true
+
 resilience4j:
   circuitbreaker:
     circuitBreakerAspectOrder: 2

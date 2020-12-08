@@ -2,24 +2,19 @@ package com.grcp.resilience.core.domain.space;
 
 import java.util.ArrayList;
 import java.util.List;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.Singular;
+import lombok.Value;
 
-@Getter
-@Setter(AccessLevel.PRIVATE)
+@Value
 @Builder(toBuilder = true)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public class SpacePhoto {
 
     private boolean isError;
     private String errorSource;
 
-    @Singular
+    @Builder.Default
     private List<Photo> photos = new ArrayList<>();
 }

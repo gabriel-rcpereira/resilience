@@ -23,3 +23,5 @@
 ## Jackson-annotations References
 - http://fasterxml.github.io/jackson-annotations/javadoc/2.5/com/fasterxml/jackson/annotation/JsonInclude.Include.html#NON_EMPTY
 
+# Other references
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints
