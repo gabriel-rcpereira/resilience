@@ -30,3 +30,19 @@
 ## Other references
 - https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints
 
+## Dojo challenges (pt-br)
+- Test retry - Consultar uma API que sempre retorna erro
+	- executar uma chamada que irá acionar o retry e deve retornar a resposta identificando que o fallback tratou o erro;
+	
+- Test retry - Consultar uma API que retorna sucesso somente após as 3 primeiras tentativas, nas 3 primeiras tentativas irá retornar falha
+	- executar uma chamada que irá acionar o retry 3 vezes e não deve retornar nenhuma descrição no atributo que identifica o fallback;
+	
+- Test circuit breaker - Consultar uma API que sempre retorna erro
+	- executar a api na quantidade de vezes definida para o circuito abrir(7);
+
+- Test circuit breaker - Consultar uma API que retorna sucesso somente após as 4 primeiras tentativas, nas 4 primeiras tentativas irá retornar falha
+	- executar a api na quantidade de vezes definida para o circuito abrir(7);
+	- retornar o atributo do response preenchido somente enquanto o circuito estiver aberto;
+	- perceber que mesmo com a API retornando sucesso o consumo da api só será possível após a transição de CLOSE->HALF;
+		- executar a API 3 vezes para que o circuit breaker mude de HALF->OPEN;
+	
