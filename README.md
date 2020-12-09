@@ -23,5 +23,10 @@
 ## Jackson-annotations References
 - http://fasterxml.github.io/jackson-annotations/javadoc/2.5/com/fasterxml/jackson/annotation/JsonInclude.Include.html#NON_EMPTY
 
-# Other references
-https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints
+## Mock-server
+- https://www.mock-server.com/where/docker.html
+- https://www.mock-server.com/mock_server/creating_expectations.html
+
+## Other references
+- https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints
+

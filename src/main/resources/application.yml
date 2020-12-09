@@ -59,7 +59,7 @@ resilience4j.circuitbreaker:
       minimumNumberOfCalls: 7
       permittedNumberOfCallsInHalfOpenState: 3
       automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 10s
+      waitDurationInOpenState: 60s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
   #      recordExceptions:

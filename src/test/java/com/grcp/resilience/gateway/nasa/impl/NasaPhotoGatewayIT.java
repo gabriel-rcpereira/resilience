@@ -107,7 +107,7 @@ public class NasaPhotoGatewayIT {
         Assertions.assertTrue(spacePhotoOptionalRetryFallback.get().isError());
         Assertions.assertEquals(spacePhotoOptionalRetryFallback.get().getErrorSource(), "retry");
 
-        Thread.sleep(10100);
+        Thread.sleep(60000);
         wireMock.resetAll();
         mockSuccessApi();
         Optional<SpacePhoto> spacePhotoOptionalSuccess = nasaPhotoGateway.findPhotos();
