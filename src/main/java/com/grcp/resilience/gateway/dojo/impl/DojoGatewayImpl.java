@@ -3,7 +3,7 @@ package com.grcp.resilience.gateway.dojo.impl;
 import com.grcp.resilience.domain.dojo.Dojo;
 import com.grcp.resilience.gateway.DojoGateway;
 import com.grcp.resilience.gateway.dojo.feign.MockedApiClient;
-import com.grcp.resilience.gateway.dojo.json.MockedApiResponse;
+import com.grcp.resilience.gateway.dojo.feign.json.MockedApiResponse;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,6 +1,6 @@
 package com.grcp.resilience.gateway.dojo.feign;
 
-import com.grcp.resilience.gateway.dojo.json.MockedApiResponse;
+import com.grcp.resilience.gateway.dojo.feign.json.MockedApiResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

@@ -1,10 +1,9 @@
-package com.grcp.resilience.gateway.dojo.json;
+package com.grcp.resilience.gateway.dojo.feign.json;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Value;
 
 @Data
 @Builder(toBuilder = true)
