@@ -1,12 +1,22 @@
 [
   {
     "httpRequest": {
+      "path": "/test-success",
+      "method": "GET"
+    },
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 200, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
+    }
+  },
+  {
+    "httpRequest": {
       "path": "/test-fail",
       "method": "GET"
     },
-    "httpResponse": {
-      "body": "hello",
-      "statusCode": 500
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 500, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
     }
   },
   {
@@ -18,9 +28,9 @@
       "remainingTimes" : 2,
       "unlimited" : false
     },
-    "httpResponse": {
-      "body": "hello",
-      "statusCode": 500
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 500, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
     }
   },
   {
@@ -28,9 +38,9 @@
       "path": "/test-success-after-four-times",
       "method": "GET"
     },
-    "httpResponse": {
-      "body": "hello",
-      "statusCode": 200
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 200, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
     }
   }
 ]
