@@ -14,7 +14,7 @@ public class ResilienceConfiguration {
 
     @Bean
     public RegistryEventConsumer<Retry> registerRetryEventConsumer() {
-        return new RegistryEventConsumer<>() {
+        return new RegistryEventConsumer<Retry>() {
             @Override
             public void onEntryAddedEvent(EntryAddedEvent<Retry> entryAddedEvent) {
                 entryAddedEvent.getAddedEntry().getEventPublisher()
@@ -35,7 +35,7 @@ public class ResilienceConfiguration {
 
     @Bean
     public RegistryEventConsumer<CircuitBreaker> registerCircuitBreakerEventConsumer() {
-        return new RegistryEventConsumer<>() {
+        return new RegistryEventConsumer<CircuitBreaker>() {
             @Override
             public void onEntryAddedEvent(EntryAddedEvent<CircuitBreaker> entryAddedEvent) {
                 entryAddedEvent.getAddedEntry().getEventPublisher()
