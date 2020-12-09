@@ -1,6 +1,6 @@
 version: "2.4"
 services:
-  mockServer:
+  mockServer-dojo:
     image: mockserver/mockserver:mockserver-5.11.1
     ports:
       - 1080:1080

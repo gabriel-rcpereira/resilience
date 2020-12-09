@@ -21,11 +21,11 @@
   },
   {
     "httpRequest": {
-      "path": "/test-success-after-four-times",
+      "path": "/test-success-after-three-times",
       "method": "GET"
     },
     "times" : {
-      "remainingTimes" : 2,
+      "remainingTimes" : 3,
       "unlimited" : false
     },
     "httpResponseTemplate": {
@@ -35,7 +35,31 @@
   },
   {
     "httpRequest": {
-      "path": "/test-success-after-four-times",
+      "path": "/test-success-after-three-times",
+      "method": "GET"
+    },
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 200, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/test-success-after-seven-times",
+      "method": "GET"
+    },
+    "times" : {
+      "remainingTimes" : 7,
+      "unlimited" : false
+    },
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 500, headers: [{ name: 'Content-Type', values: ['application/json'] }], body: JSON.stringify({method: request.method, path: request.path, body: request.body}) };",
+      "templateType": "JAVASCRIPT"
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/test-success-after-seven-times",
       "method": "GET"
     },
     "httpResponseTemplate": {
