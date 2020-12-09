@@ -30,7 +30,6 @@ management:
         include: "*"
 
 management.health.circuitbreakers.enabled: true
-management.health.ratelimiters.enabled: true
 
 resilience4j:
   circuitbreaker:
@@ -40,42 +39,14 @@ resilience4j:
 
 resilience4j.circuitbreaker:
   configs:
-#    default:
-#      registerHealthIndicator: true
-#      slidingWindowType: TIME_BASED # how resilience aggregate the number of calls
-#      slidingWindowSize: 10 # time to aggregate number of requests
-#      permittedNumberOfCallsInHalfOpenState: 3 # number of calls allowed before change to closed again
-#      minimumNumberOfCalls: 3 # Configures the minimum number of calls which are required (per sliding window period) before the CircuitBreaker can calculate the error rate or slow call rate.
-#      waitDurationInOpenState: 50s # The time that the CircuitBreaker should wait before transitioning from open to half-open.
-#      failureRateThreshold: 50 #Configures the failure rate threshold in percentage.
-#      eventConsumerBufferSize: 10
-#      automaticTransitionFromOpenToHalfOpenEnabled: false #The advantage here is no thread monitors the state of all CircuitBreakers.
-#      recordExceptions
-#      ignoreExceptions
     default:
       registerHealthIndicator: true
       slidingWindowType: TIME_BASED
-      slidingWindowSize: 10
+      slidingWindowSize: 60
       minimumNumberOfCalls: 7
       permittedNumberOfCallsInHalfOpenState: 3
       automaticTransitionFromOpenToHalfOpenEnabled: true
       waitDurationInOpenState: 60s
-      failureRateThreshold: 50
-      eventConsumerBufferSize: 10
-  #      recordExceptions:
-  #        - org.springframework.web.client.HttpServerErrorException
-  #        - java.util.concurrent.TimeoutException
-  #        - java.io.IOException
-  #      ignoreExceptions:
-  #        - io.github.robwin.exception.BusinessException
-  #    shared:
-  #      slidingWindowSize: 100
-  #      permittedNumberOfCallsInHalfOpenState: 30
-  #      waitDurationInOpenState: 1s
-  #      failureRateThreshold: 50
-  #      eventConsumerBufferSize: 10
-  #      ignoreExceptions:
-  #        - io.github.robwin.exception.BusinessException
   instances:
     nasapi:
       baseConfig: default
@@ -92,3 +63,33 @@ resilience4j.retry:
   instances:
     nasapi:
       baseConfig: default
+
+  #      recordExceptions:
+  #        - org.springframework.web.client.HttpServerErrorException
+  #        - java.util.concurrent.TimeoutException
+  #        - java.io.IOException
+  #      ignoreExceptions:
+  #        - io.github.robwin.exception.BusinessException
+  #    shared:
+  #      slidingWindowSize: 100
+  #      permittedNumberOfCallsInHalfOpenState: 30
+  #      waitDurationInOpenState: 1s
+  #      failureRateThreshold: 50
+  #      eventConsumerBufferSize: 10
+  #      ignoreExceptions:
+  #        - io.github.robwin.exception.BusinessException
+
+  #    default:
+  #      registerHealthIndicator: true
+  #      slidingWindowType: TIME_BASED # how resilience aggregate the number of calls
+  #      slidingWindowSize: 10 # time to aggregate number of requests
+  #      permittedNumberOfCallsInHalfOpenState: 3 # number of calls allowed before change to closed again
+  #      minimumNumberOfCalls: 3 # Configures the minimum number of calls which are required (per sliding window period) before the CircuitBreaker can calculate the error rate or slow call rate.
+  #      waitDurationInOpenState: 50s # The time that the CircuitBreaker should wait before transitioning from open to half-open.
+  #      failureRateThreshold: 50 #Configures the failure rate threshold in percentage.
+  #      eventConsumerBufferSize: 10
+  #      automaticTransitionFromOpenToHalfOpenEnabled: false #The advantage here is no thread monitors the state of all CircuitBreakers.
+  #      recordExceptions
+  #      ignoreExceptions
+  #      failureRateThreshold: 50
+  #      eventConsumerBufferSize: 10
